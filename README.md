@@ -11,9 +11,9 @@ Based on that, we decided to take the measures from the station of Nantes (Franc
 We used SQL Plugin for Firefox to process the data from the Meteo France station of Nantes (France, 44000).
 We wished to retain only the average temperature of each day, so we used the following query:
 
-'''sql 
+```sql 
 SELECT substr(date_col_ID,0,9) as jour, date_col_ID, avg(temperature_col_ID)-273.15 FROM tablename WHERE num_station_col_ID=<num_station_ID> GROUP BY substr(date_col_ID,0,9);
-'''
+```
 
 num_station_col_ID for Nantes (France, 440000) is 07222, in the World Meteo Organization classification.
 
